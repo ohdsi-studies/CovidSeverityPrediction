@@ -1,0 +1,426 @@
+{
+  "ExpressionLimit": {"Type": "All"},
+  "CollapseSettings": {
+    "CollapseType": "ERA",
+    "EraPad": 0
+  },
+  "CensorWindow": {
+    "StartDate": null,
+    "EndDate": null
+  },
+  "ConceptSets": [
+    {
+      "expression": {"items": [
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 40487536,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "447996002",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Intubation of respiratory tract",
+            "DOMAIN_ID": "Procedure",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Procedure",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 765576,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "450601000124103",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Orotracheal intubation using bougie device",
+            "DOMAIN_ID": "Procedure",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Procedure",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 2108641,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "41140",
+            "VOCABULARY_ID": "CPT4",
+            "CONCEPT_NAME": "Glossectomy; complete or total, with or without tracheostomy, without radical neck dissection",
+            "DOMAIN_ID": "Procedure",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "CPT4",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 2108642,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "41145",
+            "VOCABULARY_ID": "CPT4",
+            "CONCEPT_NAME": "Glossectomy; complete or total, with or without tracheostomy, with unilateral radical neck dissection",
+            "DOMAIN_ID": "Procedure",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "CPT4",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 2106470,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "31502",
+            "VOCABULARY_ID": "CPT4",
+            "CONCEPT_NAME": "Tracheotomy tube change prior to establishment of fistula tract",
+            "DOMAIN_ID": "Procedure",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "CPT4",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 2106642,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "31730",
+            "VOCABULARY_ID": "CPT4",
+            "CONCEPT_NAME": "Transtracheal (percutaneous) introduction of needle wire dilator/stent or indwelling tube for oxygen therapy",
+            "DOMAIN_ID": "Procedure",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "CPT4",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4331311,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "2267008",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Changing tracheostomy tube",
+            "DOMAIN_ID": "Procedure",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Procedure",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4337048,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "232686001",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Insertion of tracheal T-tube",
+            "DOMAIN_ID": "Procedure",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Procedure",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4337047,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "232685002",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Insertion of tracheostomy tube",
+            "DOMAIN_ID": "Procedure",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Procedure",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4337046,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "232684003",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Minitrach insertion",
+            "DOMAIN_ID": "Procedure",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Procedure",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4149878,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "30963003",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Transglottic catheterization of trachea",
+            "DOMAIN_ID": "Procedure",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Procedure",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        }
+      ]},
+      "name": "Intubation",
+      "id": 0
+    },
+    {
+      "expression": {"items": [
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 46257585,
+            "STANDARD_CONCEPT": "C",
+            "CONCEPT_CODE": "1022227",
+            "VOCABULARY_ID": "CPT4",
+            "CONCEPT_NAME": "Extracorporeal membrane oxygenation (ECMO)/extracorporeal life support (ECLS) provided by physician",
+            "DOMAIN_ID": "Procedure",
+            "STANDARD_CONCEPT_CAPTION": "Classification",
+            "CONCEPT_CLASS_ID": "CPT4 Hierarchy",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 2788034,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "5A15223",
+            "VOCABULARY_ID": "ICD10PCS",
+            "CONCEPT_NAME": "Extracorporeal Membrane Oxygenation, Continuous",
+            "DOMAIN_ID": "Procedure",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "ICD10PCS",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4338595,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "232969009",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Cardiac support using extracorporeal membrane oxygenation circuitry",
+            "DOMAIN_ID": "Procedure",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Procedure",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4052536,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "233573008",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Extracorporeal membrane oxygenation",
+            "DOMAIN_ID": "Procedure",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Procedure",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        }
+      ]},
+      "name": "ECMO",
+      "id": 1
+    },
+    {
+      "expression": {"items": [
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 2008006,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "96.7",
+            "VOCABULARY_ID": "ICD9Proc",
+            "CONCEPT_NAME": "Other continuous invasive mechanical ventilation",
+            "DOMAIN_ID": "Procedure",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "3-dig nonbill code",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4080957,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "182686001",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Endotracheal respiratory assistance",
+            "DOMAIN_ID": "Procedure",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Procedure",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4237460,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "408853006",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Intermittent positive pressure ventilation via endotracheal tube",
+            "DOMAIN_ID": "Procedure",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Procedure",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 44790095,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "226471000000101",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Invasive ventilation",
+            "DOMAIN_ID": "Procedure",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Procedure",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        }
+      ]},
+      "name": "Invasive ventilation",
+      "id": 2
+    }
+  ],
+  "EndStrategy": {"DateOffset": {
+    "DateField": "StartDate",
+    "Offset": 365
+  }},
+  "cdmVersionRange": ">=5.0.0",
+  "CensoringCriteria": [],
+  "QualifiedLimit": {"Type": "First"},
+  "InclusionRules": [],
+  "PrimaryCriteria": {
+    "CriteriaList": [
+      {"Death": {
+        "CorrelatedCriteria": null,
+        "CodesetId": null,
+        "DeathSourceConcept": null,
+        "DeathTypeExclude": false,
+        "DeathType": null,
+        "OccurrenceStartDate": null,
+        "Gender": null,
+        "Age": null
+      }},
+      {"ProcedureOccurrence": {
+        "ProcedureType": null,
+        "CorrelatedCriteria": null,
+        "CodesetId": 1,
+        "ProcedureSourceConcept": null,
+        "Quantity": null,
+        "ProviderSpecialty": null,
+        "Gender": null,
+        "ProcedureTypeExclude": false,
+        "VisitType": null,
+        "First": null,
+        "OccurrenceStartDate": null,
+        "Modifier": null,
+        "Age": null
+      }},
+      {"ProcedureOccurrence": {
+        "ProcedureType": null,
+        "CorrelatedCriteria": null,
+        "CodesetId": 0,
+        "ProcedureSourceConcept": null,
+        "Quantity": null,
+        "ProviderSpecialty": null,
+        "Gender": null,
+        "ProcedureTypeExclude": false,
+        "VisitType": null,
+        "First": null,
+        "OccurrenceStartDate": null,
+        "Modifier": null,
+        "Age": null
+      }},
+      {"ProcedureOccurrence": {
+        "ProcedureType": null,
+        "CorrelatedCriteria": null,
+        "CodesetId": 2,
+        "ProcedureSourceConcept": null,
+        "Quantity": null,
+        "ProviderSpecialty": null,
+        "Gender": null,
+        "ProcedureTypeExclude": false,
+        "VisitType": null,
+        "First": null,
+        "OccurrenceStartDate": null,
+        "Modifier": null,
+        "Age": null
+      }}
+    ],
+    "PrimaryCriteriaLimit": {"Type": "All"},
+    "ObservationWindow": {
+      "PostDays": 0,
+      "PriorDays": 0
+    }
+  }
+}

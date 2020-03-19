@@ -1,0 +1,1593 @@
+{
+  "getPlpDataArgs": {
+    "maxSampleSize": null,
+    "washoutPeriod": 0
+  },
+  "skeletonType": "PatientLevelPredictionStudy",
+  "populationSettings": [
+    {
+      "minTimeAtRisk": 0,
+      "requireTimeAtRisk": false,
+      "addExposureDaysToStart": false,
+      "riskWindowStart": 0,
+      "washoutPeriod": 365,
+      "attr_class": "populationSettings",
+      "addExposureDaysToEnd": false,
+      "includeAllOutcomes": true,
+      "priorOutcomeLookback": 365,
+      "binary": true,
+      "removeSubjectsWithPriorOutcome": false,
+      "riskWindowEnd": 14,
+      "firstExposureOnly": true
+    },
+    {
+      "minTimeAtRisk": 0,
+      "requireTimeAtRisk": false,
+      "addExposureDaysToStart": false,
+      "riskWindowStart": 0,
+      "washoutPeriod": 365,
+      "attr_class": "populationSettings",
+      "addExposureDaysToEnd": false,
+      "includeAllOutcomes": true,
+      "priorOutcomeLookback": 365,
+      "binary": true,
+      "removeSubjectsWithPriorOutcome": false,
+      "riskWindowEnd": 30,
+      "firstExposureOnly": true
+    },
+    {
+      "minTimeAtRisk": 364,
+      "requireTimeAtRisk": false,
+      "addExposureDaysToStart": false,
+      "riskWindowStart": 0,
+      "washoutPeriod": 365,
+      "attr_class": "populationSettings",
+      "addExposureDaysToEnd": false,
+      "includeAllOutcomes": true,
+      "priorOutcomeLookback": 365,
+      "binary": true,
+      "removeSubjectsWithPriorOutcome": false,
+      "riskWindowEnd": 60,
+      "firstExposureOnly": false
+    }
+  ],
+  "organizationName": "OHDSI",
+  "targetIds": [47],
+  "runPlpArgs": {
+    "nfold": 3,
+    "minCovariateFraction": 0.001,
+    "splitSeed": null,
+    "testSplit": "person",
+    "testFraction": 0.25,
+    "normalizeData": true
+  },
+  "description": null,
+  "version": "v2.7.0",
+  "outcomeIds": [
+    39,
+    24
+  ],
+  "skeletonVersion": "v0.0.1",
+  "createdDate": null,
+  "conceptSetCrossReference": [{
+    "targetName": "covariateSettings",
+    "conceptSetId": 6,
+    "propertyName": "excludedCovariateConceptIds",
+    "targetIndex": 0
+  }],
+  "createdBy": null,
+  "cohortDefinitions": [
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "All"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {
+          "StartDate": null,
+          "EndDate": null
+        },
+        "ConceptSets": [
+          {
+            "expression": {"items": [
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 40487536,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "447996002",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Intubation of respiratory tract",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 765576,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "450601000124103",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Orotracheal intubation using bougie device",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2108641,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "41140",
+                  "VOCABULARY_ID": "CPT4",
+                  "CONCEPT_NAME": "Glossectomy; complete or total, with or without tracheostomy, without radical neck dissection",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "CPT4",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2108642,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "41145",
+                  "VOCABULARY_ID": "CPT4",
+                  "CONCEPT_NAME": "Glossectomy; complete or total, with or without tracheostomy, with unilateral radical neck dissection",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "CPT4",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2106470,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "31502",
+                  "VOCABULARY_ID": "CPT4",
+                  "CONCEPT_NAME": "Tracheotomy tube change prior to establishment of fistula tract",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "CPT4",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2106642,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "31730",
+                  "VOCABULARY_ID": "CPT4",
+                  "CONCEPT_NAME": "Transtracheal (percutaneous) introduction of needle wire dilator/stent or indwelling tube for oxygen therapy",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "CPT4",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4331311,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "2267008",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Changing tracheostomy tube",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4337048,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "232686001",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Insertion of tracheal T-tube",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4337047,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "232685002",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Insertion of tracheostomy tube",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4337046,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "232684003",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Minitrach insertion",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4149878,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "30963003",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Transglottic catheterization of trachea",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              }
+            ]},
+            "name": "Intubation",
+            "id": 0
+          },
+          {
+            "expression": {"items": [
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 46257585,
+                  "STANDARD_CONCEPT": "C",
+                  "CONCEPT_CODE": "1022227",
+                  "VOCABULARY_ID": "CPT4",
+                  "CONCEPT_NAME": "Extracorporeal membrane oxygenation (ECMO)/extracorporeal life support (ECLS) provided by physician",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Classification",
+                  "CONCEPT_CLASS_ID": "CPT4 Hierarchy",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2788034,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "5A15223",
+                  "VOCABULARY_ID": "ICD10PCS",
+                  "CONCEPT_NAME": "Extracorporeal Membrane Oxygenation, Continuous",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "ICD10PCS",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4338595,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "232969009",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Cardiac support using extracorporeal membrane oxygenation circuitry",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4052536,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "233573008",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Extracorporeal membrane oxygenation",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              }
+            ]},
+            "name": "ECMO",
+            "id": 1
+          },
+          {
+            "expression": {"items": [
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2008006,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "96.7",
+                  "VOCABULARY_ID": "ICD9Proc",
+                  "CONCEPT_NAME": "Other continuous invasive mechanical ventilation",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "3-dig nonbill code",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4080957,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "182686001",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Endotracheal respiratory assistance",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4237460,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "408853006",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Intermittent positive pressure ventilation via endotracheal tube",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 44790095,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "226471000000101",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Invasive ventilation",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              }
+            ]},
+            "name": "Invasive ventilation",
+            "id": 2
+          }
+        ],
+        "EndStrategy": {"DateOffset": {
+          "DateField": "StartDate",
+          "Offset": 365
+        }},
+        "cdmVersionRange": ">=5.0.0",
+        "CensoringCriteria": [],
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [
+            {"Death": {
+              "CorrelatedCriteria": null,
+              "CodesetId": null,
+              "DeathSourceConcept": null,
+              "DeathTypeExclude": false,
+              "DeathType": null,
+              "OccurrenceStartDate": null,
+              "Gender": null,
+              "Age": null
+            }},
+            {"ProcedureOccurrence": {
+              "ProcedureType": null,
+              "CorrelatedCriteria": null,
+              "CodesetId": 1,
+              "ProcedureSourceConcept": null,
+              "Quantity": null,
+              "ProviderSpecialty": null,
+              "Gender": null,
+              "ProcedureTypeExclude": false,
+              "VisitType": null,
+              "First": null,
+              "OccurrenceStartDate": null,
+              "Modifier": null,
+              "Age": null
+            }},
+            {"ProcedureOccurrence": {
+              "ProcedureType": null,
+              "CorrelatedCriteria": null,
+              "CodesetId": 0,
+              "ProcedureSourceConcept": null,
+              "Quantity": null,
+              "ProviderSpecialty": null,
+              "Gender": null,
+              "ProcedureTypeExclude": false,
+              "VisitType": null,
+              "First": null,
+              "OccurrenceStartDate": null,
+              "Modifier": null,
+              "Age": null
+            }},
+            {"ProcedureOccurrence": {
+              "ProcedureType": null,
+              "CorrelatedCriteria": null,
+              "CodesetId": 2,
+              "ProcedureSourceConcept": null,
+              "Quantity": null,
+              "ProviderSpecialty": null,
+              "Gender": null,
+              "ProcedureTypeExclude": false,
+              "VisitType": null,
+              "First": null,
+              "OccurrenceStartDate": null,
+              "Modifier": null,
+              "Age": null
+            }}
+          ],
+          "PrimaryCriteriaLimit": {"Type": "All"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": "2020-03-16T14:17:32.381+0000",
+      "createdBy": "ohdsi1",
+      "name": "[SCY]Composite endpoint-ECMO, intubation, invasive ventilation, and death",
+      "modifiedDate": null,
+      "description": null,
+      "expressionType": null,
+      "modifiedBy": null,
+      "id": 39
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "First"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {
+          "StartDate": null,
+          "EndDate": null
+        },
+        "ConceptSets": [],
+        "cdmVersionRange": ">=5.0.0",
+        "CensoringCriteria": [],
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"Death": {
+            "CorrelatedCriteria": null,
+            "CodesetId": null,
+            "DeathSourceConcept": null,
+            "DeathTypeExclude": false,
+            "DeathType": null,
+            "OccurrenceStartDate": null,
+            "Gender": null,
+            "Age": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "First"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": "2020-03-10T12:21:20.719+0000",
+      "createdBy": "ohdsi1",
+      "name": "[SCYou]All-cause mortality",
+      "modifiedDate": null,
+      "description": null,
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 24
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "All"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {
+          "StartDate": null,
+          "EndDate": null
+        },
+        "ConceptSets": [
+          {
+            "expression": {"items": [
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 40487536,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "447996002",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Intubation of respiratory tract",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 765576,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "450601000124103",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Orotracheal intubation using bougie device",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2108641,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "41140",
+                  "VOCABULARY_ID": "CPT4",
+                  "CONCEPT_NAME": "Glossectomy; complete or total, with or without tracheostomy, without radical neck dissection",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "CPT4",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2108642,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "41145",
+                  "VOCABULARY_ID": "CPT4",
+                  "CONCEPT_NAME": "Glossectomy; complete or total, with or without tracheostomy, with unilateral radical neck dissection",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "CPT4",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2106470,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "31502",
+                  "VOCABULARY_ID": "CPT4",
+                  "CONCEPT_NAME": "Tracheotomy tube change prior to establishment of fistula tract",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "CPT4",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2106642,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "31730",
+                  "VOCABULARY_ID": "CPT4",
+                  "CONCEPT_NAME": "Transtracheal (percutaneous) introduction of needle wire dilator/stent or indwelling tube for oxygen therapy",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "CPT4",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4331311,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "2267008",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Changing tracheostomy tube",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4337048,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "232686001",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Insertion of tracheal T-tube",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4337047,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "232685002",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Insertion of tracheostomy tube",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4337046,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "232684003",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Minitrach insertion",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4149878,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "30963003",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Transglottic catheterization of trachea",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              }
+            ]},
+            "name": "Intubation",
+            "id": 0
+          },
+          {
+            "expression": {"items": [
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 46257585,
+                  "STANDARD_CONCEPT": "C",
+                  "CONCEPT_CODE": "1022227",
+                  "VOCABULARY_ID": "CPT4",
+                  "CONCEPT_NAME": "Extracorporeal membrane oxygenation (ECMO)/extracorporeal life support (ECLS) provided by physician",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Classification",
+                  "CONCEPT_CLASS_ID": "CPT4 Hierarchy",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2788034,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "5A15223",
+                  "VOCABULARY_ID": "ICD10PCS",
+                  "CONCEPT_NAME": "Extracorporeal Membrane Oxygenation, Continuous",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "ICD10PCS",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4338595,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "232969009",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Cardiac support using extracorporeal membrane oxygenation circuitry",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4052536,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "233573008",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Extracorporeal membrane oxygenation",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              }
+            ]},
+            "name": "ECMO",
+            "id": 1
+          },
+          {
+            "expression": {"items": [
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2008006,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "96.7",
+                  "VOCABULARY_ID": "ICD9Proc",
+                  "CONCEPT_NAME": "Other continuous invasive mechanical ventilation",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "3-dig nonbill code",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4080957,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "182686001",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Endotracheal respiratory assistance",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4237460,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "408853006",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Intermittent positive pressure ventilation via endotracheal tube",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 44790095,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "226471000000101",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Invasive ventilation",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              }
+            ]},
+            "name": "Invasive ventilation",
+            "id": 2
+          },
+          {
+            "expression": {"items": [{
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 4266367,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "6142004",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Influenza",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }]},
+            "name": "Influenza",
+            "id": 3
+          }
+        ],
+        "EndStrategy": {"DateOffset": {
+          "DateField": "StartDate",
+          "Offset": 365
+        }},
+        "cdmVersionRange": ">=5.0.0",
+        "CensoringCriteria": [],
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [{
+          "expression": {
+            "CriteriaList": [
+              {
+                "RestrictVisit": false,
+                "StartWindow": {
+                  "UseEventEnd": false,
+                  "Start": {
+                    "Days": 365,
+                    "Coeff": -1
+                  },
+                  "End": {
+                    "Days": 1,
+                    "Coeff": -1
+                  },
+                  "UseIndexEnd": false
+                },
+                "IgnoreObservationPeriod": false,
+                "EndWindow": null,
+                "Criteria": {"ProcedureOccurrence": {
+                  "ProcedureType": null,
+                  "CorrelatedCriteria": null,
+                  "CodesetId": 1,
+                  "ProcedureSourceConcept": null,
+                  "Quantity": null,
+                  "ProviderSpecialty": null,
+                  "Gender": null,
+                  "ProcedureTypeExclude": false,
+                  "VisitType": null,
+                  "First": null,
+                  "OccurrenceStartDate": null,
+                  "Modifier": null,
+                  "Age": null
+                }},
+                "Occurrence": {
+                  "Type": 1,
+                  "IsDistinct": false,
+                  "Count": 0
+                }
+              },
+              {
+                "RestrictVisit": false,
+                "StartWindow": {
+                  "UseEventEnd": false,
+                  "Start": {
+                    "Days": 365,
+                    "Coeff": -1
+                  },
+                  "End": {
+                    "Days": 1,
+                    "Coeff": -1
+                  },
+                  "UseIndexEnd": false
+                },
+                "IgnoreObservationPeriod": false,
+                "EndWindow": null,
+                "Criteria": {"ProcedureOccurrence": {
+                  "ProcedureType": null,
+                  "CorrelatedCriteria": null,
+                  "CodesetId": 0,
+                  "ProcedureSourceConcept": null,
+                  "Quantity": null,
+                  "ProviderSpecialty": null,
+                  "Gender": null,
+                  "ProcedureTypeExclude": false,
+                  "VisitType": null,
+                  "First": null,
+                  "OccurrenceStartDate": null,
+                  "Modifier": null,
+                  "Age": null
+                }},
+                "Occurrence": {
+                  "Type": 1,
+                  "IsDistinct": false,
+                  "Count": 0
+                }
+              },
+              {
+                "RestrictVisit": false,
+                "StartWindow": {
+                  "UseEventEnd": false,
+                  "Start": {
+                    "Days": 365,
+                    "Coeff": -1
+                  },
+                  "End": {
+                    "Days": 1,
+                    "Coeff": -1
+                  },
+                  "UseIndexEnd": false
+                },
+                "IgnoreObservationPeriod": false,
+                "EndWindow": null,
+                "Criteria": {"ProcedureOccurrence": {
+                  "ProcedureType": null,
+                  "CorrelatedCriteria": null,
+                  "CodesetId": 2,
+                  "ProcedureSourceConcept": null,
+                  "Quantity": null,
+                  "ProviderSpecialty": null,
+                  "Gender": null,
+                  "ProcedureTypeExclude": false,
+                  "VisitType": null,
+                  "First": null,
+                  "OccurrenceStartDate": null,
+                  "Modifier": null,
+                  "Age": null
+                }},
+                "Occurrence": {
+                  "Type": 1,
+                  "IsDistinct": false,
+                  "Count": 1
+                }
+              }
+            ],
+            "Type": "ALL",
+            "DemographicCriteriaList": [],
+            "Groups": [],
+            "Count": null
+          },
+          "name": "Without intubation, invasive ventilation, and ECMO during previous one year",
+          "description": null
+        }],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"ConditionOccurrence": {
+            "OccurrenceEndDate": null,
+            "CorrelatedCriteria": null,
+            "ConditionTypeExclude": false,
+            "CodesetId": 3,
+            "ProviderSpecialty": null,
+            "Gender": null,
+            "VisitType": null,
+            "First": true,
+            "OccurrenceStartDate": null,
+            "ConditionType": null,
+            "ConditionSourceConcept": null,
+            "StopReason": null,
+            "Age": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "All"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 365
+          }
+        }
+      },
+      "createdDate": "2020-03-16T21:28:42.078+0000",
+      "createdBy": "ohdsi1",
+      "name": "[SCY]Influenza without ECMO, intubation, and invasive ventilation during previous one year",
+      "modifiedDate": "2020-03-16T21:31:05.302+0000",
+      "description": null,
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": "ohdsi1",
+      "id": 47
+    }
+  ],
+  "modelSettings": [
+    {"LassoLogisticRegressionSettings": {
+      "seed": null,
+      "variance": 0.01
+    }},
+    {"GradientBoostingMachineSettings": {
+      "maxDepth": [
+        4,
+        6,
+        17
+      ],
+      "minRows": [20],
+      "seed": null,
+      "nthread": 20,
+      "ntrees": [
+        10,
+        100
+      ],
+      "learnRate": [
+        0.01,
+        0.1
+      ]
+    }}
+  ],
+  "name": "[SCYou]Influenza death v2",
+  "modifiedDate": null,
+  "covariateSettings": [{
+    "VisitCountMediumTerm": false,
+    "ObservationShortTerm": false,
+    "shortTermStartDays": -60,
+    "MeasurementRangeGroupShortTerm": false,
+    "ConditionOccurrenceLongTerm": false,
+    "DrugEraStartLongTerm": false,
+    "VisitCountShortTerm": true,
+    "Chads2Vasc": false,
+    "ConditionGroupEraStartLongTerm": false,
+    "ConditionEraShortTerm": false,
+    "Dcsi": false,
+    "DrugGroupEraLongTerm": true,
+    "DrugGroupEraShortTerm": true,
+    "ConditionEraStartLongTerm": false,
+    "temporal": false,
+    "DemographicsIndexMonth": false,
+    "ConditionOccurrencePrimaryInpatientLongTerm": false,
+    "ConditionEraAnyTimePrior": false,
+    "addDescendantsToInclude": false,
+    "ConditionGroupEraStartMediumTerm": false,
+    "ProcedureOccurrenceLongTerm": false,
+    "DrugExposureLongTerm": false,
+    "DrugEraStartShortTerm": false,
+    "DistinctIngredientCountMediumTerm": false,
+    "DistinctMeasurementCountShortTerm": false,
+    "MeasurementRangeGroupLongTerm": false,
+    "ConditionGroupEraOverlapping": false,
+    "attr_fun": "getDbDefaultCovariateData",
+    "MeasurementRangeGroupMediumTerm": false,
+    "DrugGroupEraStartMediumTerm": false,
+    "MeasurementAnyTimePrior": false,
+    "MeasurementMediumTerm": false,
+    "includedCovariateIds": [],
+    "ConditionOccurrenceAnyTimePrior": false,
+    "DistinctConditionCountLongTerm": false,
+    "MeasurementValueLongTerm": false,
+    "DrugEraShortTerm": false,
+    "DrugGroupEraAnyTimePrior": false,
+    "DrugEraOverlapping": false,
+    "ConditionOccurrencePrimaryInpatientAnyTimePrior": false,
+    "ConditionEraMediumTerm": false,
+    "ConditionEraOverlapping": false,
+    "ConditionEraStartShortTerm": false,
+    "ObservationAnyTimePrior": false,
+    "VisitConceptCountShortTerm": false,
+    "DemographicsEthnicity": true,
+    "DistinctIngredientCountLongTerm": false,
+    "ConditionOccurrencePrimaryInpatientShortTerm": false,
+    "DemographicsAgeGroup": true,
+    "DistinctProcedureCountShortTerm": false,
+    "DistinctObservationCountMediumTerm": false,
+    "includedCovariateConceptIds": [],
+    "DrugGroupEraStartShortTerm": false,
+    "addDescendantsToExclude": false,
+    "DrugEraLongTerm": false,
+    "DistinctConditionCountShortTerm": false,
+    "ConditionGroupEraShortTerm": true,
+    "ConditionEraStartMediumTerm": false,
+    "VisitCountLongTerm": true,
+    "DemographicsRace": true,
+    "ProcedureOccurrenceAnyTimePrior": false,
+    "DistinctObservationCountLongTerm": false,
+    "attr_class": "covariateSettings",
+    "ProcedureOccurrenceMediumTerm": false,
+    "CharlsonIndex": false,
+    "DemographicsPriorObservationTime": false,
+    "MeasurementShortTerm": false,
+    "DistinctProcedureCountMediumTerm": false,
+    "ConditionEraLongTerm": false,
+    "DrugGroupEraStartLongTerm": false,
+    "DemographicsGender": true,
+    "DeviceExposureAnyTimePrior": false,
+    "ObservationLongTerm": false,
+    "DemographicsIndexYearMonth": false,
+    "ConditionOccurrenceMediumTerm": false,
+    "longTermStartDays": -365,
+    "DemographicsAge": false,
+    "DrugGroupEraOverlapping": true,
+    "DistinctMeasurementCountLongTerm": false,
+    "MeasurementRangeGroupAnyTimePrior": false,
+    "DistinctConditionCountMediumTerm": false,
+    "DrugGroupEraMediumTerm": false,
+    "ProcedureOccurrenceShortTerm": false,
+    "ObservationMediumTerm": false,
+    "ConditionGroupEraAnyTimePrior": true,
+    "Chads2": false,
+    "DrugExposureAnyTimePrior": false,
+    "DeviceExposureLongTerm": false,
+    "DemographicsTimeInCohort": false,
+    "DistinctMeasurementCountMediumTerm": false,
+    "MeasurementValueShortTerm": false,
+    "DeviceExposureMediumTerm": false,
+    "ConditionGroupEraStartShortTerm": false,
+    "ConditionOccurrencePrimaryInpatientMediumTerm": false,
+    "MeasurementLongTerm": false,
+    "DemographicsIndexYear": false,
+    "MeasurementValueMediumTerm": false,
+    "DrugEraStartMediumTerm": false,
+    "MeasurementValueAnyTimePrior": false,
+    "DistinctObservationCountShortTerm": false,
+    "DrugEraMediumTerm": false,
+    "ConditionGroupEraLongTerm": true,
+    "DrugExposureShortTerm": false,
+    "DistinctIngredientCountShortTerm": false,
+    "DeviceExposureShortTerm": false,
+    "mediumTermStartDays": -180,
+    "DemographicsPostObservationTime": false,
+    "VisitConceptCountLongTerm": false,
+    "VisitConceptCountMediumTerm": false,
+    "excludedCovariateConceptIds": [
+      1708749,
+      1708750,
+      1708751,
+      1799140,
+      1799159,
+      1799160,
+      1799161,
+      19085101,
+      19099769,
+      19120800,
+      19127258,
+      21026369,
+      21026370,
+      21033730,
+      21036127,
+      21038309,
+      21039480,
+      21045991,
+      21045992,
+      21048129,
+      21053434,
+      21058690,
+      21067797,
+      21068625,
+      21073158,
+      21077661,
+      21078729,
+      21082860,
+      21085246,
+      21095051,
+      21102524,
+      21104913,
+      21114711,
+      21122005,
+      21134211,
+      21144129,
+      21144130,
+      21154064,
+      21154065,
+      21163853,
+      21173650,
+      21173651,
+      35416377,
+      35416449,
+      35606448,
+      35743668,
+      35747850,
+      35758192,
+      35794547,
+      35794548,
+      36219233,
+      36223397,
+      36223398,
+      36228969,
+      36230514,
+      36230515,
+      36879874,
+      36880887,
+      40071216,
+      40126825,
+      40147465,
+      40147466,
+      40167571,
+      40241045,
+      40241048,
+      40823845,
+      40833640,
+      40834875,
+      40834876,
+      40842262,
+      40913297,
+      40944572,
+      40958253,
+      40959513,
+      40977444,
+      40984191,
+      41006887,
+      41025798,
+      41039912,
+      41051697,
+      41102615,
+      41123122,
+      41154632,
+      41170144,
+      41205307,
+      41213683,
+      41240728,
+      41310135,
+      41403044,
+      41403057,
+      41403419,
+      41403436,
+      41403820,
+      41403902,
+      41414792,
+      41416460,
+      41416792,
+      41424531,
+      41475094,
+      41475100,
+      41475103,
+      41475106,
+      41475109,
+      41475113,
+      41475116,
+      42482649,
+      42710465,
+      42710466,
+      42713068,
+      42713951,
+      42716367,
+      42727066,
+      42727352,
+      42903246,
+      43140107,
+      43162233,
+      43173267,
+      43173268,
+      43184121,
+      43184122,
+      43195152,
+      43196389,
+      43196390,
+      43206068,
+      43206069,
+      43216984,
+      43219424,
+      43219425,
+      43274704,
+      43274705,
+      43274833,
+      43285497,
+      43290988,
+      43296270,
+      43297364,
+      43519018,
+      43519020,
+      43519021,
+      43519050,
+      43519069,
+      43521142,
+      43521143,
+      43521144,
+      43678636,
+      44034133,
+      44098813,
+      44127393,
+      44127394,
+      44162905,
+      44177963,
+      44197742,
+      44198231,
+      44206176,
+      44206178,
+      45892675,
+      45892677,
+      1708748,
+      1799139,
+      40167569,
+      1799141,
+      1799152,
+      1799155,
+      1799158,
+      19085102,
+      19099782,
+      19121833,
+      19127259,
+      19127260,
+      21033729,
+      21036126,
+      21039146,
+      21049278,
+      21073159,
+      21085245,
+      21085247,
+      21092632,
+      21102525,
+      21108165,
+      21108186,
+      21117598,
+      21127681,
+      21134210,
+      21134212,
+      21163852,
+      35416418,
+      35416446,
+      35416469,
+      35606449,
+      35606450,
+      35606451,
+      35750330,
+      35764514,
+      35773052,
+      35794545,
+      36223399,
+      36226891,
+      36230516,
+      36248955,
+      40071217,
+      40071218,
+      40167570,
+      40241046,
+      40241047,
+      40825777,
+      40842260,
+      40842261,
+      40851025,
+      40866015,
+      40928179,
+      40935707,
+      40966826,
+      40990742,
+      41013695,
+      41025799,
+      41046549,
+      41091956,
+      41170143,
+      41194674,
+      41203348,
+      41209755,
+      41248040,
+      41268020,
+      41294537,
+      41296238,
+      41319069,
+      41403041,
+      41403049,
+      41403053,
+      41403054,
+      41403061,
+      41403062,
+      41403065,
+      41403230,
+      41403458,
+      41403539,
+      41403656,
+      41403678,
+      41416461,
+      41423414,
+      41424928,
+      41426247,
+      41427036,
+      41475096,
+      41475104,
+      42712165,
+      42719324,
+      42723782,
+      42726836,
+      42727351,
+      42902579,
+      43140108,
+      43151059,
+      43152435,
+      43162234,
+      43173266,
+      43174545,
+      43175633,
+      43186523,
+      43195151,
+      43206067,
+      43207297,
+      43208412,
+      43258272,
+      43259331,
+      43269179,
+      43290989,
+      43290990,
+      43519019,
+      43521141,
+      43606350,
+      43647036,
+      43683042,
+      43696437,
+      43786262,
+      43863129,
+      44029718,
+      44032394,
+      44060170,
+      44067192,
+      44069725,
+      44071262,
+      44088416,
+      44101419,
+      44101420,
+      44108373,
+      44127395,
+      44162906,
+      44197860,
+      44198230,
+      44206175,
+      44206177
+    ],
+    "ConditionGroupEraMediumTerm": false,
+    "DrugExposureMediumTerm": false,
+    "DistinctProcedureCountLongTerm": false,
+    "DrugEraAnyTimePrior": false,
+    "endDays": -30,
+    "ConditionOccurrenceShortTerm": false
+  }],
+  "modifiedBy": null,
+  "conceptSets": [{
+    "expression": {"items": [
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 1799139,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "260101",
+          "VOCABULARY_ID": "RxNorm",
+          "CONCEPT_NAME": "Oseltamivir",
+          "DOMAIN_ID": "Drug",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Ingredient",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": true
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 1708748,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "69722",
+          "VOCABULARY_ID": "RxNorm",
+          "CONCEPT_NAME": "Zanamivir",
+          "DOMAIN_ID": "Drug",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Ingredient",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": true
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 40167569,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "619693",
+          "VOCABULARY_ID": "RxNorm",
+          "CONCEPT_NAME": "peramivir",
+          "DOMAIN_ID": "Drug",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Ingredient",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": true
+      }
+    ]},
+    "name": "anti-flu drug",
+    "id": 6
+  }],
+  "id": 3,
+  "packageName": "SevereCovidPrediction"
+}
